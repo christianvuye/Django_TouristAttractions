@@ -16,16 +16,16 @@ attractions = [
     {'attraction_name': 'Semois Valley', 'city': 'Semois Valley'},
     {'attraction_name': 'Cathedral of Saint Bavo', 'city': 'Ghent'},
     {'attraction_name': 'Antwerp Art Museums', 'city': 'Antwerp'},
-    {'attraction_name': 'Horta Museum and Town Houses', 'city': 'Brussels'}
-    {'attraction_name': 'Cathedral of Our Lady', 'city': 'Antwerp'}
-    {'attraction_name': 'Rubens House ', 'city': 'Antwerp'}
-    {'attraction_name': 'MAS', 'city': 'Antwerp'}
-    {'attraction_name': 'Antwerp Zoo', 'city': 'Antwerp'}
-    {'attraction_name': 'Chocolate Nation', 'city': 'Antwerp'}
+    {'attraction_name': 'Horta Museum and Town Houses', 'city': 'Brussels'},
+    {'attraction_name': 'Cathedral of Our Lady', 'city': 'Antwerp'},
+    {'attraction_name': 'Rubens House ', 'city': 'Antwerp'},
+    {'attraction_name': 'MAS', 'city': 'Antwerp'},
+    {'attraction_name': 'Antwerp Zoo', 'city': 'Antwerp'},
+    {'attraction_name': 'Chocolate Nation', 'city': 'Antwerp'},
     {'attraction_name': 'Antwerp-Centraal Railway Station', 'city': 'Antwerp'}
 ]
 
 
 def home(request):
-    context = ["attractions": attractions]
-    return render(request, "/home.html", context)
+    context = {"attractions": attractions}
+    return render(request, "tourist_attractions/home.html", context)

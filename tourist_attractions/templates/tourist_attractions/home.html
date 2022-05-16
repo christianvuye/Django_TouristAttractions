@@ -13,5 +13,12 @@
           <th>Attraction</th>
           <th>City</th>
           <th>City details</th>
+        </tr>
+        {% for item in attractions|dictsort:"city" %}
+        <tr>
+            <td>{{ item.attraction_name }}</td>
+            <td>{{ item.city }}</td>
+        </tr>
+        {% endfor %}
     </table>
 {% endblock %}
